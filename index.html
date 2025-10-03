@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Men's Fashion</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+<nav class="navbar">
+  <div class="navbar-left">
+    <a href="index.html"><img src="/Hero/1.png" alt="Logo"></a>
+  </div>
+  <div class="navbar-center">
+    <a href="men.html">Men</a>
+    <a href="women.html">Women</a>
+    <a href="kids.html">Kids</a>
+    <a href="home.html">Home</a>
+    <a href="beauty.html">Beauty</a>
+    
+    <div class="search-box">
+      <input type="text" placeholder="Search for products, brands and more">
+      <i class="fas fa-search"></i>
+    </div>
+  </div>
+  <div class="navbar-right">
+    <!-- User Menu -->
+    <div class="menu-container">
+      <i class="fas fa-user" id="user-icon"></i>
+      <div class="dropdown-menu" id="user-dropdown">
+        <a href="#"><i class="fas fa-log-out"></i> Log-Out</a>
+      </div>
+    </div>
+
+    <!-- Cart Icon -->
+    <div class="cart-icon-container">
+      <i class="fas fa-shopping-bag" id="cart-icon"></i>
+      <span id="cart-count" class="cart-count">0</span>
+    </div>
+
+    <!-- 3-Dot Menu -->
+    <div class="menu-container">
+      <i class="fas fa-ellipsis-v menu-dots" id="menu-dots"></i>
+      <div class="dropdown-menu" id="dots-dropdown">
+        <a href="#"><i class="fas fa-bell"></i> Notification Preferences</a>
+        <a href="#"><i class="fas fa-headset"></i> 24x7 Customer Care</a>
+        
+        <a href="#"><i class="fas fa-download"></i> Download App</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+  <section id="CartSidebar">
+  <!-- Cart Sidebar -->
+  <div class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <i class="fas fa-times" id="close-cart"></i>
+    </div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-footer">
+      <button class="checkout-btn">Checkout</button>
+    </div>
+  </div>
+
+  
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay"></div>
+</section>
+
+  <!-- Hero Carousel -->
+  <section class="hero-carousel">
+    <div class="carousel-container">
+      <div class="carousel-slide">
+        <a href="men.html"><img src="/Hero/B1.png"></a>
+      </div>
+      
+      <div class="carousel-slide">
+        <a href="women.html"><img src="/Hero/B2.png"></a>
+      </div>
+      
+      <div class="carousel-slide">
+        <a href="kids.html"><img src="/Hero/B3.png"></a>
+      </div>
+      
+      <div class="carousel-slide">
+        <a href="home.html"><img src="/Hero/B4.png"></a>
+      </div>
+      
+      <div class="carousel-slide">
+        <a href="beauty.html"><img src="/Hero/B5.png"></a>
+      </div>
+      
+
+      
+    </div>
+    <button class="carousel-arrow prev" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+    <button class="carousel-arrow next" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+    <div class="carousel-dots" id="carousel-dots"></div>
+  </section>
+
+
+  <section class="deals-section">
+  <div class="deals-grid" id="productGrid">
+    <a href="product-page-1.html" class="deal-link">
+      <div class="deal-card">
+        <div class="deal-text">
+          <h3>Running Shoes</h3>
+          <p>Comfortable for sports</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="product-page-2.html" class="deal-link">
+      <div class="deal-card">
+        <div class="deal-text">
+          <h3>Leather Jacket</h3>
+          <p>Stylish and warm</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="product-page-3.html" class="deal-link">
+      <div class="deal-card">
+        <div class="deal-text">
+          <h3>Smart Watch</h3>
+          <p>Track fitness and health</p>
+        </div>
+      </div>
+    </a>
+
+        <a href="product-page-3.html" class="deal-link">
+      <div class="deal-card">
+        <div class="deal-text">
+          <h3>Smart Watch</h3>
+          <p>Track fitness and health</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="product-page-3.html" class="deal-link">
+      <div class="deal-card">
+        <div class="deal-text">
+          <h3>Smart Watch</h3>
+          <p>Track fitness and health</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="product-page-3.html" class="deal-link">
+      <div class="deal-card">
+        <div class="deal-text">
+          <h3>Smart Watch</h3>
+          <p>Track fitness and health</p>
+        </div>
+      </div>
+    </a>
+  </div>
+</section>
+
+
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Men's Fashion</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-left">
+      <a href="index.html"><img src="/Hero/1.png" alt="Logo"></a>
+    </div>
+    <div class="navbar-center">
+        <a href="men.html">Men</a>
+        <a href="women.html">Women</a>
+        <a href="kids.html">Kids</a>
+        <a href="home.html" class="active">Home</a>
+        <a href="beauty.html">Beauty</a>
+        <div class="search-box">
+          <input type="text" placeholder="Search for products, brands and more">
+          <i class="fas fa-search"></i>
+        </div>
+    </div>
+    <div class="navbar-right">
+      <div class="menu-container">
+        <i class="fas fa-user" id="user-icon"></i>
+        <div class="dropdown-menu" id="user-dropdown">
+          <a href="#"><i class="fas fa-bell"></i> Cart</a>
+          <a href="#"><i class="fas fa-headset"></i> Log-Out</a>
+        </div>
+      </div>
+
+      <div class="cart-icon-container">
+        <i class="fas fa-shopping-bag" id="cart-icon"></i>
+        <span id="cart-count" class="cart-count">0</span>
+      </div>
+
+      <div class="menu-container">
+        <i class="fas fa-ellipsis-v menu-dots" id="menu-dots"></i>
+        <div class="dropdown-menu" id="dots-dropdown">
+          <a href="#"><i class="fas fa-bell"></i> Notification Preferences</a>
+          <a href="#"><i class="fas fa-headset"></i> 24x7 Customer Care</a>
+          <a href="#"><i class="fas fa-download"></i> Download App</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Cart Sidebar -->
+  <section id="CartSidebar">
+    <div class="cart-sidebar" id="cart-sidebar">
+      <div class="cart-header">
+        <h3>Your Cart</h3>
+        <i class="fas fa-times" id="close-cart"></i>
+      </div>
+      <div class="cart-items" id="cart-items"></div>
+      <div class="cart-footer">
+        <button class="checkout-btn">Checkout</button>
+      </div>
+    </div>
+    <div class="overlay" id="overlay"></div>
+  </section>
+
+  <!-- Product Section -->
+  <section class="container" id="product-section">
+
+  <div class="left">
+      <h3>Categories</h3>
+      <ul>
+        <li><a href="#living-room">Living Room</a></li>
+        <li><a href="#bedroom">Bedroom</a></li>
+        <li><a href="#kitchen-dining">Kitchen & Dining</a></li>
+        <li><a href="#bathroom">Bathroom</a></li>
+        <li><a href="#lighting">Lighting</a></li>
+        <li><a href="#decor-accessories">Decor Accessories</a></li>
+        <li><a href="#outdoor-garden">Outdoor & Garden</a></li>
+
+      </ul>
+  </div>
+
+  <div class="right">
+    
+    <section id="shirts-tshirts">
+      <h2>Shirts & T-Shirts</h2>
+
+      <div class="product-grid">
+
+        <!-- Product Card -->
+        <div class="product-card">
+          <img src="/Shirts/S1.png" alt="Adidas Black Shirt" class="product-image">
+            <div class="product-info">
+              <h4 class="brand">Raymond</h4>
+              <p class="product-name">Black Shirt</p>
+
+              <div class="sizes">
+                <button class="size">S</button>
+                <button class="size">M</button>
+                <button class="size">L</button>
+                <button class="size">XL</button>
+                <button class="size">XXL</button>
+              </div>
+
+              <div class="bottom-row">
+                <span class="price">MRP ₹1,999</span>
+
+                <!-- Cart Action Container -->
+                <div class="cart-action-container">
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="/Shirts/S2.png" alt="Adidas Black Shirt" class="product-image">
+          <div class="product-info">
+            <h4 class="brand">Peter England</h4>
+            <p class="product-name">White Shirt</p>
+
+            <div class="sizes">
+              <button class="size">S</button>
+              <button class="size">M</button>
+              <button class="size">L</button>
+              <button class="size">XL</button>
+              <button class="size">XXL</button>
+            </div>
+
+            <div class="bottom-row">
+              <span class="price">MRP ₹1,999</span>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="/Shirts/S3.png" alt="Adidas Black Shirt" class="product-image">
+          <div class="product-info">
+            <h4 class="brand">Allen Solly</h4>
+            <p class="product-name">Maroon Shirt</p>
+
+            <div class="sizes">
+              <button class="size">S</button>
+              <button class="size">M</button>
+              <button class="size">L</button>
+              <button class="size">XL</button>
+              <button class="size">XXL</button>
+            </div>
+
+            <div class="bottom-row">
+              <span class="price">MRP ₹1,999</span>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="/Shirts/S4.png" alt="Adidas Black Shirt" class="product-image">
+          <div class="product-info">
+            <h4 class="brand">Arrow</h4>
+            <p class="product-name">Sky Blue Shirt</p>
+
+            <div class="sizes">
+              <button class="size">S</button>
+              <button class="size">M</button>
+              <button class="size">L</button>
+              <button class="size">XL</button>
+              <button class="size">XXL</button>
+            </div>
+
+            <div class="bottom-row">
+              <span class="price">MRP ₹1,999</span>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="product-grid">
+
+        <!-- Product Card -->
+        <div class="product-card">
+          <img src="/Shirts/T1.png" alt="Adidas Black Shirt" class="product-image">
+            <div class="product-info">
+              <h4 class="brand">Gucci </h4>
+              <p class="product-name">Plain (Wine)</p>
+
+              <div class="sizes">
+                <button class="size">S</button>
+                <button class="size">M</button>
+                <button class="size">L</button>
+                <button class="size">XL</button>
+                <button class="size">XXL</button>
+              </div>
+
+              <div class="bottom-row">
+                <span class="price">MRP ₹1,999</span>
+
+                <!-- Cart Action Container -->
+                <div class="cart-action-container">
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+          </div>
+        </div>
+
+
+        <div class="product-card">
+          <img src="/Shirts/T2.png" alt="Adidas Black Shirt" class="product-image">
+          <div class="product-info">
+            <h4 class="brand">Tommy Hilfiger</h4>
+            <p class="product-name">Wakanda Forever (White)</p>
+
+            <div class="sizes">
+              <button class="size">S</button>
+              <button class="size">M</button>
+              <button class="size">L</button>
+              <button class="size">XL</button>
+              <button class="size">XXL</button>
+            </div>
+
+            <div class="bottom-row">
+              <span class="price">MRP ₹1,999</span>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="/Shirts/T3.png" alt="Adidas Black Shirt" class="product-image">
+          <div class="product-info">
+            <h4 class="brand">Allen Solly</h4>
+            <p class="product-name">Batman (Black)</p>
+
+            <div class="sizes">
+              <button class="size">S</button>
+              <button class="size">M</button>
+              <button class="size">L</button>
+              <button class="size">XL</button>
+              <button class="size">XXL</button>
+            </div>
+
+            <div class="bottom-row">
+              <span class="price">MRP ₹1,999</span>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="/Shirts/T4.png" alt="Adidas Black Shirt" class="product-image">
+          <div class="product-info">
+            <h4 class="brand">Levi's</h4>
+            <p class="product-name">Wolf </p>
+
+            <div class="sizes">
+              <button class="size">S</button>
+              <button class="size">M</button>
+              <button class="size">L</button>
+              <button class="size">XL</button>
+              <button class="size">XXL</button>
+            </div>
+
+            <div class="bottom-row">
+              <span class="price">MRP ₹1,999</span>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="pants-trousers">
+      <h2>Pants & Trousers</h2>
+
+      <div class="product-grid">
+
+        <!-- Product Card -->
+        <div class="product-card">
+          <img src="/Shirts/P1.png" alt="Adidas Black Shirt" class="product-image">
+            <div class="product-info">
+              <h4 class="brand">Peter England</h4>
+              <p class="product-name">Grey Pant</p>
+
+              <div class="sizes">
+                <button class="size">32</button>
+                <button class="size">34</button>
+                <button class="size">36</button>
+                <button class="size">38</button>
+                <button class="size">40</button>
+              </div>
+
+              <div class="bottom-row">
+                <span class="price">MRP ₹2,500</span>
+
+                <!-- Cart Action Container -->
+                <div class="cart-action-container">
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="/Shirts/P2.png" alt="Adidas Black Shirt" class="product-image">
+          <div class="product-info">
+            <h4 class="brand">Peter England</h4>
+            <p class="product-name">White Shirt</p>
+
+              <div class="sizes">
+                <button class="size">32</button>
+                <button class="size">34</button>
+                <button class="size">36</button>
+                <button class="size">38</button>
+                <button class="size">40</button>
+              </div>
+
+            <div class="bottom-row">
+              <span class="price">MRP ₹1,999</span>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="/Shirts/P3.png" alt="Adidas Black Shirt" class="product-image">
+          <div class="product-info">
+            <h4 class="brand">Allen Solly</h4>
+            <p class="product-name">Maroon Shirt</p>
+
+              <div class="sizes">
+                <button class="size">32</button>
+                <button class="size">34</button>
+                <button class="size">36</button>
+                <button class="size">38</button>
+                <button class="size">40</button>
+              </div>
+
+            <div class="bottom-row">
+              <span class="price">MRP ₹1,999</span>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="/Shirts/P4.png" alt="Adidas Black Shirt" class="product-image">
+          <div class="product-info">
+            <h4 class="brand">Arrow</h4>
+            <p class="product-name">Sky Blue Shirt</p>
+
+            <div class="sizes">
+                <button class="size">32</button>
+                <button class="size">34</button>
+                <button class="size">36</button>
+                <button class="size">38</button>
+                <button class="size">40</button>
+            </div>
+
+            <div class="bottom-row">
+              <span class="price">MRP ₹1,999</span>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="product-grid">
+
+        <!-- Product Card -->
+        <div class="product-card">
+          <img src="/Shirts/P5.png" alt="Adidas Black Shirt" class="product-image">
+            <div class="product-info">
+              <h4 class="brand">Gucci </h4>
+              <p class="product-name">Plain (Wine)</p>
+
+              <div class="sizes">
+                <button class="size">32</button>
+                <button class="size">34</button>
+                <button class="size">36</button>
+                <button class="size">38</button>
+                <button class="size">40</button>
+              </div>
+
+              <div class="bottom-row">
+                <span class="price">MRP ₹1,999</span>
+
+                <!-- Cart Action Container -->
+                <div class="cart-action-container">
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="/Shirts/P6.png" alt="Adidas Black Shirt" class="product-image">
+          <div class="product-info">
+            <h4 class="brand">Tommy Hilfiger</h4>
+            <p class="product-name">Wakanda Forever (White)</p>
+
+            <div class="sizes">
+                <button class="size">32</button>
+                <button class="size">34</button>
+                <button class="size">36</button>
+                <button class="size">38</button>
+                <button class="size">40</button>
+            </div>
+
+            <div class="bottom-row">
+              <span class="price">MRP ₹1,999</span>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="/Shirts/P7.png" alt="Adidas Black Shirt" class="product-image">
+          <div class="product-info">
+            <h4 class="brand">Allen Solly</h4>
+            <p class="product-name">Batman (Black)</p>
+
+            <div class="sizes">
+                <button class="size">32</button>
+                <button class="size">34</button>
+                <button class="size">36</button>
+                <button class="size">38</button>
+                <button class="size">40</button>
+            </div>
+
+            <div class="bottom-row">
+              <span class="price">MRP ₹1,999</span>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="/Shirts/P8.png" alt="Adidas Black Shirt" class="product-image">
+          <div class="product-info">
+            <h4 class="brand">Levi's</h4>
+            <p class="product-name">Wolf </p>
+
+            <div class="sizes">
+                <button class="size">32</button>
+                <button class="size">34</button>
+                <button class="size">36</button>
+                <button class="size">38</button>
+                <button class="size">40</button>
+            </div>
+
+            <div class="bottom-row">
+              <span class="price">MRP ₹1,999</span>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="kurta-pyjama">
+      <h2>Kurta & Pyjama</h2>
+
+      <div class="product-grid">
+
+        <!-- Product Card -->
+        <div class="product-card">
+          <img src="/Shirts/KP1.png" alt="Adidas Black Shirt" class="product-image">
+            <div class="product-info">
+              <h4 class="brand">Raymond</h4>
+              <p class="product-name">Black Shirt</p>
+
+              <div class="sizes">
+                <button class="size">32</button>
+                <button class="size">34</button>
+                <button class="size">36</button>
+                <button class="size">38</button>
+                <button class="size">40</button>
+              </div>
+
+              <div class="bottom-row">
+                <span class="price">MRP ₹1,999</span>
+
+                <!-- Cart Action Container -->
+                <div class="cart-action-container">
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="/Shirts/KP2.png" alt="Adidas Black Shirt" class="product-image">
+          <div class="product-info">
+            <h4 class="brand">Peter England</h4>
+            <p class="product-name">White Shirt</p>
+
+            <div class="sizes">
+                <button class="size">32</button>
+                <button class="size">34</button>
+                <button class="size">36</button>
+                <button class="size">38</button>
+                <button class="size">40</button>
+            </div>
+
+            <div class="bottom-row">
+              <span class="price">MRP ₹1,999</span>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="/Shirts/KP3.png" alt="Adidas Black Shirt" class="product-image">
+          <div class="product-info">
+            <h4 class="brand">Allen Solly</h4>
+            <p class="product-name">Maroon Shirt</p>
+
+            <div class="sizes">
+                <button class="size">32</button>
+                <button class="size">34</button>
+                <button class="size">36</button>
+                <button class="size">38</button>
+                <button class="size">40</button>
+            </div>
+
+            <div class="bottom-row">
+              <span class="price">MRP ₹1,999</span>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="/Shirts/KP4.png" alt="Adidas Black Shirt" class="product-image">
+          <div class="product-info">
+            <h4 class="brand">Arrow</h4>
+            <p class="product-name">Sky Blue Shirt</p>
+
+            <div class="sizes">
+                <button class="size">32</button>
+                <button class="size">34</button>
+                <button class="size">36</button>
+                <button class="size">38</button>
+                <button class="size">40</button>
+            </div>
+
+            <div class="bottom-row">
+              <span class="price">MRP ₹1,999</span>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="product-grid">
+
+        <!-- Product Card -->
+        <div class="product-card">
+          <img src="/Shirts/KP5.png" alt="Adidas Black Shirt" class="product-image">
+            <div class="product-info">
+              <h4 class="brand">Gucci </h4>
+              <p class="product-name">Plain (Wine)</p>
+
+              <div class="sizes">
+                <button class="size">32</button>
+                <button class="size">34</button>
+                <button class="size">36</button>
+                <button class="size">38</button>
+                <button class="size">40</button>
+              </div>
+
+              <div class="bottom-row">
+                <span class="price">MRP ₹1,999</span>
+
+                <!-- Cart Action Container -->
+                <div class="cart-action-container">
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="/Shirts/KP6.png" alt="Adidas Black Shirt" class="product-image">
+          <div class="product-info">
+            <h4 class="brand">Tommy Hilfiger</h4>
+            <p class="product-name">Wakanda Forever (White)</p>
+
+            <div class="sizes">
+                <button class="size">32</button>
+                <button class="size">34</button>
+                <button class="size">36</button>
+                <button class="size">38</button>
+                <button class="size">40</button>
+            </div>
+
+            <div class="bottom-row">
+              <span class="price">MRP ₹1,999</span>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="/Shirts/KP7.png" alt="Adidas Black Shirt" class="product-image">
+          <div class="product-info">
+            <h4 class="brand">Allen Solly</h4>
+            <p class="product-name">Batman (Black)</p>
+
+            <div class="sizes">
+                <button class="size">32</button>
+                <button class="size">34</button>
+                <button class="size">36</button>
+                <button class="size">38</button>
+                <button class="size">40</button>
+            </div>
+
+            <div class="bottom-row">
+              <span class="price">MRP ₹1,999</span>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="/Shirts/KP8.png" alt="Adidas Black Shirt" class="product-image">
+          <div class="product-info">
+            <h4 class="brand">Levi's</h4>
+            <p class="product-name">Wolf </p>
+
+            <div class="sizes">
+                <button class="size">32</button>
+                <button class="size">34</button>
+                <button class="size">36</button>
+                <button class="size">38</button>
+                <button class="size">40</button>
+            </div>
+
+            <div class="bottom-row">
+              <span class="price">MRP ₹1,999</span>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="shoes">
+      <h2>Shoes</h2>
+
+      <div class="product-grid">
+
+        <!-- Product Card -->
+        <div class="product-card">
+          <img src="/Shirts/SH1.png" alt="Adidas Black Shirt" class="product-image">
+            <div class="product-info">
+              <h4 class="brand">Raymond</h4>
+              <p class="product-name">Black Shirt</p>
+
+              <div class="sizes">
+                <button class="size">7</button>
+                <button class="size">8</button>
+                <button class="size">9</button>
+                <button class="size">10</button>
+                <button class="size">11</button>
+              </div>
+
+              <div class="bottom-row">
+                <span class="price">MRP ₹1,999</span>
+
+                <!-- Cart Action Container -->
+                <div class="cart-action-container">
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="/Shirts/SH2.png" alt="Adidas Black Shirt" class="product-image">
+          <div class="product-info">
+            <h4 class="brand">Peter England</h4>
+            <p class="product-name">White Shirt</p>
+
+              <div class="sizes">
+                <button class="size">7</button>
+                <button class="size">8</button>
+                <button class="size">9</button>
+                <button class="size">10</button>
+                <button class="size">11</button>
+              </div>
+
+            <div class="bottom-row">
+              <span class="price">MRP ₹1,999</span>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="/Shirts/SH3.png" alt="Adidas Black Shirt" class="product-image">
+          <div class="product-info">
+            <h4 class="brand">Allen Solly</h4>
+            <p class="product-name">Maroon Shirt</p>
+
+              <div class="sizes">
+                <button class="size">7</button>
+                <button class="size">8</button>
+                <button class="size">9</button>
+                <button class="size">10</button>
+                <button class="size">11</button>
+              </div>
+
+            <div class="bottom-row">
+              <span class="price">MRP ₹1,999</span>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="/Shirts/SH4.png" alt="Adidas Black Shirt" class="product-image">
+          <div class="product-info">
+            <h4 class="brand">Arrow</h4>
+            <p class="product-name">Sky Blue Shirt</p>
+
+            <div class="sizes">
+                <button class="size">7</button>
+                <button class="size">8</button>
+                <button class="size">9</button>
+                <button class="size">10</button>
+                <button class="size">11</button>
+              </div>
+
+            <div class="bottom-row">
+              <span class="price">MRP ₹1,999</span>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="product-grid">
+
+        <!-- Product Card -->
+        <div class="product-card">
+          <img src="/Shirts/SH5.png" alt="Adidas Black Shirt" class="product-image">
+            <div class="product-info">
+              <h4 class="brand">Gucci </h4>
+              <p class="product-name">Plain (Wine)</p>
+
+              <div class="sizes">
+                <button class="size">7</button>
+                <button class="size">8</button>
+                <button class="size">9</button>
+                <button class="size">10</button>
+                <button class="size">11</button>
+              </div>
+
+              <div class="bottom-row">
+                <span class="price">MRP ₹1,999</span>
+
+                <!-- Cart Action Container -->
+                <div class="cart-action-container">
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="/Shirts/SH6.png" alt="Adidas Black Shirt" class="product-image">
+          <div class="product-info">
+            <h4 class="brand">Tommy Hilfiger</h4>
+            <p class="product-name">Wakanda Forever (White)</p>
+
+            <div class="sizes">
+                <button class="size">7</button>
+                <button class="size">8</button>
+                <button class="size">9</button>
+                <button class="size">10</button>
+                <button class="size">11</button>
+              </div>
+
+            <div class="bottom-row">
+              <span class="price">MRP ₹1,999</span>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="/Shirts/SH7.png" alt="Adidas Black Shirt" class="product-image">
+          <div class="product-info">
+            <h4 class="brand">Allen Solly</h4>
+            <p class="product-name">Batman (Black)</p>
+
+            <div class="sizes">
+                <button class="size">7</button>
+                <button class="size">8</button>
+                <button class="size">9</button>
+                <button class="size">10</button>
+                <button class="size">11</button>
+              </div>
+
+            <div class="bottom-row">
+              <span class="price">MRP ₹1,999</span>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="/Shirts/SH8.png" alt="Adidas Black Shirt" class="product-image">
+          <div class="product-info">
+            <h4 class="brand">Levi's</h4>
+            <p class="product-name">Wolf </p>
+
+            <div class="sizes">
+                <button class="size">7</button>
+                <button class="size">8</button>
+                <button class="size">9</button>
+                <button class="size">10</button>
+                <button class="size">11</button>
+            </div>
+
+            <div class="bottom-row">
+              <span class="price">MRP ₹1,999</span>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+
+
+    
+
+    
+  </section>
+
+
+  
+
+
+  <script src="app.js"></script>
+  
+</body>
+</html>
