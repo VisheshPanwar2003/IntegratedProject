@@ -64,16 +64,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const priceText = productCard.querySelector('.price').textContent.replace(/[^\d.]/g, '');
     const price = parseFloat(priceText);
     const image = productCard.querySelector('.product-image').src;
-    const activeSize = productCard.querySelector('.size.active');
 
-    if (!activeSize) {
-      alert('Please select a size before adding to cart.');
-      return;
+    const sizesContainer = productCard.querySelector('.sizes');
+    let size = "N/A";
+    if (sizesContainer) {
+      const activeSize = productCard.querySelector('.size.active');
+      if (!activeSize) {
+        alert('Please select a size before adding to cart.');
+        return;
+      }
+      size = activeSize.textContent;
     }
 
-    const size = activeSize.textContent;
     const productId = `${brand}-${name}-${size}`.replace(/\s+/g, '-');
-
     const existingItem = cart.find(item => item.id === productId);
 
     if (existingItem) {
@@ -96,6 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function showAddToCartFeedback(productCard) {
     const button = productCard.querySelector('.add-to-cart');
+    if (!button) return;
     const originalText = button.textContent;
 
     button.textContent = 'Added!';
@@ -154,7 +158,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ======== CART ITEM EVENTS ========
   function attachCartItemEvents() {
-    // Increase quantity
     document.querySelectorAll('.qty-btn.increase').forEach(btn => {
       btn.onclick = (e) => {
         const id = e.target.closest('.qty-btn').dataset.id;
@@ -166,7 +169,6 @@ document.addEventListener('DOMContentLoaded', () => {
       };
     });
 
-    // Decrease quantity
     document.querySelectorAll('.qty-btn.decrease').forEach(btn => {
       btn.onclick = (e) => {
         const id = e.target.closest('.qty-btn').dataset.id;
@@ -181,7 +183,6 @@ document.addEventListener('DOMContentLoaded', () => {
       };
     });
 
-    // Remove item
     document.querySelectorAll('.remove-btn').forEach(btn => {
       btn.onclick = (e) => {
         const id = e.target.closest('.remove-btn').dataset.id;
@@ -199,7 +200,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const totalAmount = calculateTotal();
-    alert(`Order placed successfully! Total: ₹${totalAmount.toFixed(2)}`);
+    alert(`Thank You for Ordering From TrendZ
+Your Order has been placed successfully! 
+Your Total is ₹${totalAmount.toFixed(2)}`);
 
     cart = [];
     saveCart();
@@ -208,4 +211,96 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ======== INITIALIZATION ========
   updateCartCount();
+
+  // ======== CAROUSEL FUNCTIONALITY ========
+  const slides = document.querySelectorAll('.carousel-slide');
+  const dotsContainer = document.getElementById('carousel-dots');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  let currentSlide = 0;
+  let autoSlideInterval;
+
+  function showSlide(index) {
+    if (index < 0) index = slides.length - 1;
+    if (index >= slides.length) index = 0;
+    document.querySelector('.carousel-container').style.transform = `translateX(-${index * 100}%)`;
+
+    document.querySelectorAll('.dot').forEach((dot, i) => {
+      dot.classList.toggle('active', i === index);
+    });
+
+    currentSlide = index;
+  }
+
+  // Create dots
+  slides.forEach((_, i) => {
+    const dot = document.createElement('span');
+    dot.classList.add('dot');
+    if (i === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => {
+      showSlide(i);
+      resetAutoSlide();
+    });
+    dotsContainer.appendChild(dot);
+  });
+
+  // Button controls
+  nextBtn.addEventListener('click', () => {
+    showSlide(currentSlide + 1);
+    resetAutoSlide();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    showSlide(currentSlide - 1);
+    resetAutoSlide();
+  });
+
+  // Auto slide
+  function startAutoSlide() {
+    autoSlideInterval = setInterval(() => {
+      showSlide(currentSlide + 1);
+    }, 3500);
+  }
+
+  function resetAutoSlide() {
+    clearInterval(autoSlideInterval);
+    startAutoSlide();
+  }
+
+  startAutoSlide();
+  showSlide(0);
+});
+
+// ======== Smooth Scrolling ========
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
+
+
+
+// ======== News Letter ========
+document.addEventListener('DOMContentLoaded', () => {
+  const emailInput = document.getElementById('newsletter-email');
+  const signupBtn = document.getElementById('signup-btn');
+
+  signupBtn.addEventListener('click', () => {
+    const email = emailInput.value.trim();
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (emailPattern.test(email)) {
+      alert('You are signed up for TrendZ!');
+      emailInput.value = ''; // clear input after signup
+    } else {
+      emailInput.reportValidity(); // shows browser's built-in warning
+    }
+  });
 });
