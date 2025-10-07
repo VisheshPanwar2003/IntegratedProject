@@ -1,3 +1,8 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
 /* ===================== Global Styles ===================== */
 body {
   margin: 0;
@@ -261,7 +266,9 @@ body {
   cursor: pointer;
   font-size: 18px;
 }
-
+.remove-btn:hover{
+  color: red;
+}
 .cart-footer {
   padding: 20px;
   border-top: 1px solid #eee;
@@ -377,47 +384,6 @@ body {
   transform: scale(1.2);
 }
 
-/* ===================== Deals Section ===================== */
-.deals-section {
-  padding: 40px 20px;
-  max-width: 80%;
-  margin: auto;
-}
-
-.deals-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.deal-link {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-  transition: transform 0.2s ease-in-out;
-}
-
-.deal-link:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-.deal-card {
-  background-color: #6a0dad;
-  border-radius: 8px;
-  padding: 24px;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 250px;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23800080" fill-opacity="0.3" d="M0,192L48,176C96,160,192,128,288,133.3C384,139,480,181,576,208C672,235,768,245,864,224C960,203,1056,149,1152,133.3C1248,117,1344,139,1392,149.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: cover;
-}
-
 
 /* ===================== Layout ===================== */
 .container {
@@ -446,6 +412,7 @@ body {
   overflow: hidden; /* Not scrollable */
 }
 
+
 .left ul {
   list-style-type: none;
   padding: 0;
@@ -469,6 +436,7 @@ body {
 
 .left a {
   text-decoration: none;
+  color: #000;
 }
 
 /* Right Section */
@@ -613,6 +581,10 @@ body {
   justify-content: center;
 }
 
+.sizes-spacer {
+  height: 40px; /* Adjust as needed — same height as size buttons area */
+}
+
 .size.active {
   background-color: #088178;
   color: #fff;
@@ -671,4 +643,145 @@ body {
 
 .add-to-cart:hover {
   background: #06685f;
+}
+
+
+
+
+
+
+
+/* ===================== Footer ===================== */
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer .col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom:20px;
+}
+
+
+
+footer h4{
+    font-size:14px;
+}
+
+footer p{
+    font-size:13px;
+    margin:0 0 8px 0;
+}
+
+footer a{
+    font-size:14px;
+    text-decoration:none;
+    color:#222;
+    margin-bottom:10px;
+}
+
+footer .follow{
+    margin-top: 20px;
+}
+
+footer .follow i{
+    color: #465b52;
+    padding-right: 4px;
+    cursor:pointer;
+}
+
+footer .install .row img{
+    border: 1px solid #088178;
+    border-radius: 6px;
+}
+
+footer .install img{
+    margin:10px 0 15px 0;
+}
+
+footer .follow i:hover,
+footer a:hover{
+    color:#088178;
+}
+
+footer .copyright{
+    width:100%;
+    text-align: center;
+}
+
+/* ===================== Newsletter ===================== */
+
+
+#newsletter{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #001c52;
+}
+
+#newsletter h4{
+    font-size: 22px;
+    font-weight: 700;
+    color:#fff;
+}
+
+#newsletter p{
+    font-size: 14px;
+    font-weight: 600;
+    color: #818ea0;
+}
+
+#newsletter p span{
+    color:#ffbd27;
+}
+
+#newsletter .form{
+    display: flex;
+    width: 40%;
+}
+
+#newsletter input{
+    height:3.125rem;
+    padding:0 1.25rem;
+    font-size: 14px;
+    width:100%;
+    border: 1px solid transparent;
+    border-radius : 4px;
+    outline: none;
+    border-top-right-radius:0 ;
+    border-bottom-right-radius:0 ;
+
+}
+
+#newsletter button{
+    background-color: #088178;
+    color:#fff;
+    white-space: nowrap;
+    border-top-left-radius:0 ;
+    border-bottom-left-radius:0 ;
+}
+
+.section-p1{
+    padding:40px 80px;
+}
+.section-m1{
+    margin:40px 0;
+}
+
+
+/* ===================== Deals ===================== */
+
+#Deals{
+padding: 0 7% ;
+}
+
+.product-grid a{
+  text-decoration: none;
+  font-style: none;
+  color: black;
 }
